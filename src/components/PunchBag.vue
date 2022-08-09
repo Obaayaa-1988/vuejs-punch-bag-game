@@ -1,7 +1,18 @@
 <template>
 <div>
 
-<h1>Helloooo</h1>
+<!-------Bag Image------>
+<div id="bag"></div>
+
+<!-------Bag Health------>
+<div id="bag-health">
+    <div></div>
+</div>
+<!-------Bag Controls------>
+<div id="controls">
+  <button>Punch</button>
+  <button>Restart</button>
+</div>
 
 
 </div>
