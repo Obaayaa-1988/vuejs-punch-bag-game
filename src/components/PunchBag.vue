@@ -22,16 +22,16 @@ export default {
 
   data() {
     return {
-      health: 200,//initial health of bag set to 100
-      ended: false,
+      health: 100,//initial health of bag set to 100(but in percentage in the html)
+      ended: false,//state for checking the punching has ended or not
     };
   },
 
   methods: {
     throwPunch() {
-      this.health -= 10;
-      if (this.health <= 0) {
-        this.ended = true;
+      this.health -= 10;//we subtract -10 from the bag health= 100 every time the punch button is clicked
+      if (this.health <= 0) {//if statement to check if the game has ended or about to end
+        this.ended = true;//this is the punch method
       }
     },
     restartPunch() {
@@ -79,5 +79,7 @@ export default {
   padding: 0.7rem 2rem;
   border: none;
   outline: none;
+  
+
 } */
 </style>
