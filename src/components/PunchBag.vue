@@ -1,13 +1,14 @@
 <template>
   <div>
-    <!-------Bag Image------>
+    <!-------Bag Image-- this where we set the background image for the app---->
     <div id="bag" v-bind:class="{ burst: ended }"></div>
 
-    <!-------Bag Health------>
+    <!-------Bag Health-- the bag health div creates outide border for the bag health div---->
     <div id="bag-health">
-      <div v-bind:style="{ width: health + '%' }"></div>
+      <div v-bind:style="{ width: health + '%' }"></div><!----this div has a background color of crimson and a percentage set to reduce the 
+      bg color when the bag is punched------the v-bind:style allows to set a vue data value on the styling inside html from the script-->
     </div>
-    <!-------Bag Controls------>
+    <!-------Bag Controls---buttons to control the punching and restarting --->
     <div id="controls">
       <button v-on:click="throwPunch" v-show="!ended">Punch</button>
       <button v-on:click="restartPunch">Restart</button>
@@ -21,7 +22,7 @@ export default {
 
   data() {
     return {
-      health: 100,
+      health: 200,//initial health of bag set to 100
       ended: false,
     };
   },
